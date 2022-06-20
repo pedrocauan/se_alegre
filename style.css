@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100;300;500;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Anek Latin', sans-serif;
+    background-image: url('montanhas.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    
+}
+
+
+
+.centraliza {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+h1 {
+    letter-spacing: 5px;
+    text-shadow: 2px 2px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+
+button {
+    letter-spacing: 5px;
+    border: none;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    /* background-image: radial-gradient(#2E2037, black); */
+    background-color: #2E2037;
+    text-shadow: 2px 2px rgba(0,0,0,0.2);
+    box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.3);
+    transition: background-color 0.5s ease;
+
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(232, 144, 1);
+    /* background-image: radial-gradient(circle at center,  #2E2037,#D37883,#643555); */
+    color: black;
+
+}
+
+button:active {
+    font-size: 29px;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25%;
+}
+
+div img {
+    max-width: 200px;
+    width: 100%;
+}
+
+iframe, div {
+    display: none;
+}
+
+
+main.clicou h1, main.clicou button {
+    display: none;
+}
+main.clicou iframe{
+    display: block;
+}
+
+main.clicou div {
+    display: flex;
+
+}
+
+@media (max-width: 640px) {
+  
+    div img {
+        width: 100px;
+    }
+
+    iframe {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@keyframes gira {
+    from{
+        transform: rotateZ(-45deg);
+        transform: rotateZ(45deg);
+    }
+    to{
+        transform: rotateZ(45deg);
+        transform: rotateZ(-45deg);
+
+    }
+}
+
+/* @keyframes volta {
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(45deg);
+    }
+} */
+
+.animacao {
+    animation: gira 1s ease;
+}
+
+.outraanimacao{
+    animation: gira 0.5s reverse ease;
+}
